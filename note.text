@@ -1,0 +1,21 @@
+Immutable data types: Immutable objects can not be modified after their creation.
+
+1 - Integers
+2 - Floating numbers
+3 - Strings
+4 - Tuples
+5 - Frozen sets
+
+Mutable data type: Mutable objects can be modified after their creation
+
+1 - Lists
+2 - Dictionaries
+3 - Sets
+
+Type conversion-
+ - Explicit = int(), float(), str() - We do the conversion forcefully
+ -Implicit 
+    x  = 3.14
+    y = 2
+    z= x + y 
+    here the value of z will be float automatically we don't convert forcefully
