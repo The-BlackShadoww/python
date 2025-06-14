@@ -384,3 +384,96 @@ print(result)
 '''
 #! -------------- Control Flow end ------------
 
+#! -------------- List --------------
+'''
+fruitsList=["apple", "banana", "cherry"]
+moreFruitsList=["orange", "grape"]
+
+print(fruitsList)
+print(fruitsList[0]) # get an element from the list
+print(fruitsList.append("orange")) # add an element to the end of the list
+print(fruitsList.remove("apple")) # remove an element from the list
+print(fruitsList.index("banana")) # get the index of an element in the list
+print(fruitsList.insert(1, "kiwi")) # insert an element at a specific index in the list
+print(fruitsList.pop(1)) # remove an element at a specific index in the list
+print(fruitsList.extend(moreFruitsList)) # add multiple list elements to the end of the list
+print(fruitsList.count("apple")) # count the number of times an element appears in the list
+print(fruitsList.sort()) # sort the list in ascending order
+print(fruitsList.reverse()) # reverse the order of the list
+print(fruitsList.copy()) # copy the list
+print(len(fruitsList)) # get the length of the list
+print(fruitsList.clear()) # remove all elements from the list
+
+print(fruitsList[0:2]) # get a slice of the list
+print(fruitsList[:2]) # get a slice of the list
+print(fruitsList[2:]) # get a slice of the list
+print(fruitsList[-2:]) # get a slice of the list
+'''
+#! -------------- List end ------------
+
+#! -------------- Tuples --------------
+'''
+fruitsTuple=("apple", "banana", "cherry")
+print(fruitsTuple)
+print(fruitsTuple[0]) # get an element from the tuple
+print(len(fruitsTuple)) # get the length of the tuple
+print(fruitsTuple.count("apple")) # count the number of times an element appears in the tuple
+print(fruitsTuple.index("banana")) # get the index of an element in the tuple
+
+# fruitsList=list(fruitsTuple) # convert a tuple to a list
+# fruitsTuple=tuple(fruitsList) # convert a list to a tuple
+
+print(fruitsTuple[1:3]) # get a slice of the tuple
+'''
+#! -------------- Tuples end ------------
+
+#! -------------- Sets --------------
+'''
+fruitsSet={"apple", "banana", "cherry"}
+# print(fruitsSet)
+# print(fruitsSet.add("orange")) # add an element to the set
+# print(fruitsSet.remove("apple")) # remove an element from the set
+# print(fruitsSet.update({"orange", "grape"})) # add multiple set elements to the set
+print(fruitsSet.update(["orange", "grape"])) # add multiple set elements to the set
+print(fruitsSet)
+# print(fruitsSet.clear()) # remove all elements from the set
+
+set1={1, 2, 3}
+set2={3, 4, 5}
+result=set1.union(set2) # get the union of two sets
+print(result)
+result=set1.intersection(set2) # get the intersection of two sets
+print(result)
+result=set1.difference(set2) # get the difference of two sets
+print(result)
+result=set1.symmetric_difference(set2) # get the symmetric difference of two sets
+print(result)
+result=set1.issubset(set2) # check if one set is a subset of another set
+print(result)
+result=set1.issuperset(set2) # check if one set is a superset of another set
+print(result)
+'''
+#! -------------- Sets end ------------
+
+#! -------------- Dictionary ------------
+person={
+    "name":"John",
+    "age":30,
+    "city":"New York",
+    "country":"USA"
+}
+
+print(person)
+print(person["name"])
+print(person.get("age"))
+print(person.keys()) # get the keys of the dictionary
+print(person.values()) # get the values of the dictionary
+print(person.items()) # get the key-value pairs of the dictionary
+print(person.pop("name")) # remove a key-value pair from the dictionary and return the value
+
+person["name"]="Jane" # update a key-value pair in the dictionary
+person.update({"age":31, "city":"Los Angeles"}) # update multiple key-value pairs in the dictionary
+
+# print(person.clear()) # remove all key-value pairs from the dictionary
+print(person)
+#! -------------- Dictionary end ------------

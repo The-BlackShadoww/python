@@ -187,4 +187,95 @@
             - Access
     - Comparison operators
         - ==, !=, >, >=, <, <=
-        - Use cases: almost everywhere 
+        - Use cases: almost everywhere
+
+# Lists
+    - Ordered
+    - Mutable
+    - Allow duplicate values
+    - Heterogeneous
+    - Dynamic size
+    - Methods:
+        - append() 
+        - remove()
+        - index()
+        - insert()
+        - pop()
+        - extend()
+        - clear()
+        - count()
+        - sort()
+        - reverse()
+        - copy()
+        - len() => len(list)
+    - List Slicing 
+        - list[start:end]
+    - Use cases:
+        - Storing user data
+        - Managing to-do Lists
+        - Processing Orders
+        - Collecting surveys
+        - etc...
+
+# Tuples
+    - Ordered
+    - Allow duplicate values
+    - Heterogeneous
+    - Fixed size
+    - Immutable
+    - Methods:
+        - count()
+        - index()
+    - converting to list
+        - list(Tuples)
+    - Use cases:
+        - Immutable data storage
+        - Return Multiple values
+        - Fixed Collections
+        - Database Records
+
+# Sets
+    - Unordered
+    - Mutable
+    - No duplicates
+    - Heterogeneous
+    - Dynamic size
+    - Methods:
+        - add()
+        - remove()
+        - update()
+        - clear()
+        - union()
+        - intersection()
+        - difference()
+        - symmetric_difference()
+        - issubset()
+        - issuperset()
+    - Use Cases:
+        - Removing duplicates
+        - Mathematical Set Operations
+        - Filtering Data
+        - Graph
+        - Data structures
+
+# Dictionary
+    - Unordered
+    - Mutable
+    - Key uniqueness
+    - Heterogeneous
+    - Methods:
+        - get()
+        - keys()
+        - values()
+        - items()
+        - pop()
+        - update()
+        - clear()
+    - Use cases:
+        - Storing Configurations settings
+        - Fast lookups
+        - String JSON data
+        - Organizing Data
+        - Database Records
+        - Nested data structures
+        - etc...
