@@ -200,3 +200,187 @@ print(text.isspace())
 print(text.istitle())
 '''
 #! -------------- String Methods for checking and counting end ------------
+
+#! -------------- Numbers and Math --------------
+"""
+a=10
+b=3
+c=3.14
+
+print(a+b) # addition
+print(a-b) # subtraction
+print(a*b) # multiplication
+print(a/b) # division
+print(a%b) # modulus
+print(a//b) # floor division
+print(a**b) # a to the power of b
+"""
+#! -------------- Numbers and Math end ------------
+
+#! -------------- Numbers and Math Type conversion --------------
+"""
+x=10
+y=3.14
+
+print("Int to Float: ", float(x))
+print("Float to Int: ", int(y))
+print("Complex: ", complex(x))
+print("Complex: ", complex(x, y))
+"""
+#! -------------- Numbers and Math Type conversion end ------------
+
+#! -------------- Math --------------
+'''
+import math
+x=10
+y=5
+
+# Basic math
+print("Square Root: ", math.sqrt(x))
+print("Power: ", math.pow(x, y))
+print("Floor: ", math.floor(x))
+print("Ceil: ", math.ceil(x))
+print("Absolute value: ", math.fabs(x))
+print("Factorial: ", math.factorial(x))
+# GCD and LCM
+print("GCD: ", math.gcd(x, y))
+print("LCM: ", math.lcm(x, y))
+# Logarithmic functions
+print("Log: ", math.log(x))
+print("Log10: ", math.log10(x))
+# Trigonometric functions
+print(math.sin(math.radians(90))) 
+print(math.cos(math.radians(90))) 
+print(math.tan(math.radians(90))) 
+print(math.sinh(math.radians(90))) 
+print(math.cosh(math.radians(90))) 
+print(math.tanh(math.radians(90)))
+# constants
+print("Pi: ", math.pi)
+print("E: ", math.e)
+'''
+#! -------------- Math end ------------
+
+#! -------------- Math Operator Precedence --------------
+'''
+# PEMDAS
+# Parentheses, Exponents, Multiplication, Division, Addition, Subtraction
+
+# result=(2+3)*4
+result=2+3*4
+print(result)
+'''
+#! -------------- Math Operator Precedence end ------------
+
+#! -------------- Control Flow --------------
+'''
+#todo if, elif, else
+# age=70
+# if age >= 18:
+#     print("You are an adult")
+#     if age >= 65:
+#         print("You are a senior")
+# elif age < 18:
+#     print("You are a minor")
+# else:
+#     print("You are an adult")
+
+# Ternary operator
+# print("You are an adult" if age >= 18 else "You are a minor")
+
+#todo for loop
+# fruitsList=["apple", "banana", "cherry"]
+# for eachFruit in fruitsList:
+#     print(eachFruit)
+
+# word="Hello" 
+# for eachLetter in word:
+#     print(eachLetter)
+
+# range(0, 10)
+# for eachNumber in range(0, 100): # 0 to 99
+#     print(eachNumber)
+
+# marks={"English": 90, "Math": 80, "Science": 70} # dictionary
+# # for eachSubject in marks:
+# #     print(eachSubject)
+
+# for subject,marks in marks.items():
+#     print(subject, marks)
+
+# uniq_numbers={1, 2, 3, 4, 5} # set
+# for eachNumber in uniq_numbers:
+#     print(eachNumber)
+
+# for num in range(10):
+#     if num == 5:
+#         # break # break the loop
+#         continue # it will skip the current iteration
+#     print(num)
+
+#todo while loop
+# starting point, ending point condition, increment/decrement
+
+# List
+# fruitsList=["apple", "banana", "cherry"]
+# index=0
+# while index < len(fruitsList):
+#     print(fruitsList[index])
+#     index+=1
+
+# # String
+# word="Hello"
+# while index < len(word):
+#     print(word[index])
+#     index+=1
+
+# # break and continue
+# index2=0
+# end=10
+# while index2 < end:
+#     if index2 == 5:
+#         # break
+#         index2+=1 # Increment index to avoid infinite loop
+#         continue
+#     print(index2)
+#     index2+=1
+
+# # dictionary
+# examResult={"English": 90, "Math": 80, "Science": 70}
+# keys=list(examResult.keys()) # list of keys
+# values=list(examResult.values()) # list of values
+
+# index3=0
+# while index3 < len(keys):
+#     print(keys[index3], values[index3])
+#     index3+=1
+
+# # set
+# my_set= {1, 2, 3, 4, 5} 
+# my_set_list=list(my_set)
+
+# index4=0
+# while index4 < len(my_set_list):
+#     print(my_set_list[index4])
+#     index4+=1
+
+
+#todo Logical Operators
+# and, or, not
+
+# age=20
+# has_permission=True
+# is_vip=False
+
+# if age >= 18 or has_permission:
+#     print("You are an adult and have permission")
+# else:
+#     print("You are not an adult")
+
+# if age>18 and has_permission and not is_vip:
+#     print("You are an adult and have permission and not a VIP")
+# else:
+#     print("You are not an adult")
+'''
+#! -------------- Control Flow end ------------
+

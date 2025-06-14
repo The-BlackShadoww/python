@@ -80,7 +80,6 @@
     - Strip whitespace from both end 
     - Remove leading whitespace
     - Remove trailing whitespace
-    
     - Checking and Counting
         - Check if string starts with a Substring
         - Check if string ends with a Substring
@@ -91,9 +90,101 @@
         - Check if all characters are digits
         - Check if the string contains only whitespace
         - Check if the string is title cased
-    
     - Use cases:
         - Data Cleaning, Formatting
         - Text Analysis
         - User Input Processing
         - Generating Dynamic text
+
+# Numbers and Math
+    - Basic Arithmetic Operations
+    - Type conversion
+        - int -> float
+        - float -> int
+        - complex
+    - Use cases
+        - Financial Calculations
+        - Data Analysis
+        - Graphics and Gaming
+        - Unit conversion
+    - Maths
+        - Square root
+        - Power
+        - Trigonometric functions
+        - Logarithmic functions
+        - Factorial
+        - Absolute value
+        - Floor and Ceiling
+        - Constants
+        - GCM: Greatest Common Divisor
+        - LCM: Least Common Multiple
+        - Use Cases:
+            - Engineering
+            - Scientific Computing
+            - Data Analysis
+            - Math Problem Solve
+            - Financial
+            - Game Development
+        - Operator Precedence sequence
+            - Exponential **
+            - Unary Plus, Unary minus, Bitwise NOT (+x, -x, ~x)
+            - Multiplication, Division, Floor Division, Modulus (*, /, //, %)
+            - Addition, Subtraction (+, -)
+            - Bitwise shift (<<, >>)
+            - Bitwise AND (&)
+            - Bitwise XOR (^)
+            - Bitwise OR (|)
+            - Comparisons, Identity, Membership (==, !=, >, <, >=, <=, is, is not, in, not in)
+            - Logical NOT (not)
+            - Logical AND (and)
+            - Logical OR (or)
+            - Use Cases:
+                - Mathematical Expressions
+                - Data Analysis
+                - Programming Logic
+                - Financial Calculations
+
+# Control Flow
+    - if, elif, else
+        - Use Cases:
+            - User Authentication
+            - Form Validation
+            - Payment Processing
+            - Data Filtering
+            - Weather Forecasting
+            - Inventory Management
+            - et...
+    - For Loop
+        - loop over Lists
+        - loop over string
+        - loop over range
+        - loop over Dictionaries
+        - use of break and continue
+        - Use Cases:
+            - Web Scaping
+            - Simulation
+            - Building user Interfaces
+            - Matrix Operations
+            - Iterating Over Dictionaries
+            - Batch Processing
+            - UI Element Generating
+    - While Loop
+        - Same as For Loop
+
+    - \\ Note \\: In python, there are for and while loops, but there is no direct equivalent to the do-while loop found in some other Programming Languages like Javascript. Also, there is no for in, for of, or forEach loop syntax specifically like in Javascript.
+
+    - Logical operators
+        - Logical and operator (and)
+        - Logical or operator (or)
+        - Logical not operator (not)
+        - Use Cases:
+            - Monitoring and Alerts
+            - Configurations Management
+            - E-commerce
+            - Data Filtering
+            - Search
+            - Input
+            - Access
+    - Comparison operators
+        - ==, !=, >, >=, <, <=
+        - Use cases: almost everywhere 
