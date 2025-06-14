@@ -1,4 +1,4 @@
-Immutable data types: Immutable objects can not be modified after their creation.
+# Immutable data types: Immutable objects can not be modified after their creation.
 
 1 - Integers
 2 - Floating numbers
@@ -6,16 +6,94 @@ Immutable data types: Immutable objects can not be modified after their creation
 4 - Tuples
 5 - Frozen sets
 
-Mutable data type: Mutable objects can be modified after their creation
+# Mutable data type: Mutable objects can be modified after their creation
 
 1 - Lists
 2 - Dictionaries
 3 - Sets
 
-Type conversion-
+# Type conversion-
  - Explicit = int(), float(), str() - We do the conversion forcefully
  -Implicit 
     x  = 3.14
     y = 2
     z= x + y 
     here the value of z will be float automatically we don't convert forcefully
+
+# Strings - Strings in python are sequences of characters enclosed within quotes
+    - Single Quotes ('')
+        - for short Strings
+        - for string with double quotes
+    - Double Quotes ("")
+        - for short and long Strings
+        - for string with single quotes
+    - Triple Quotes (''')
+        - for multiline strings or docstring
+        - for string itself contains double quotes.
+    - Triple Double Quotes (""")
+        - for multiline strings or docstring
+        - for string itself contains single quotes.
+
+# String Indexing
+    - Positive indexing 0, 1, 2, 3 ....
+    - Negative indexing -1, -2, -3 ....
+
+# String Slicing
+    - start
+    - stop
+    - step
+    - Use Cases :
+        - Extracting Substring
+        - Reversing String
+        - Manipulating
+        - Parsing data
+        - Validation and Formatting
+        - Analyzing data
+        - Cleaning data
+
+# String Repetition
+
+# String Concatenation
+    - Using the + operator
+    - join() method
+    - format() method
+    - % Formatting
+    - Use cases:
+        - Building Dynamic messages
+        - URL constructions
+        - File paths
+        - Template strings
+        - Data Formatting
+        - Generating patterns
+        - Formatting, Initialization
+        - Creating repeated messages
+
+# String Methods
+    - Convert to uppercase
+    - convert to lowercase
+    - Capitalize the first letter
+    - Title case 
+    - Swap case
+    - Replace a Substring
+    - Split the string into a Lists
+    - Join a list into a string
+    - Strip whitespace from both end 
+    - Remove leading whitespace
+    - Remove trailing whitespace
+    
+    - Checking and Counting
+        - Check if string starts with a Substring
+        - Check if string ends with a Substring
+        - find the position of a Substring
+        - Count occurrences of a Substring
+        - Check if all characters are alphanumeric
+        - Check if all characters are alphabetic
+        - Check if all characters are digits
+        - Check if the string contains only whitespace
+        - Check if the string is title cased
+    
+    - Use cases:
+        - Data Cleaning, Formatting
+        - Text Analysis
+        - User Input Processing
+        - Generating Dynamic text

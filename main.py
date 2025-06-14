@@ -133,3 +133,70 @@ interest=(principle*rate*time)/100
 print("Interest is: "+ str(interest))
 """
 #! -------------- console projects end ------------
+
+#! -------------- String Slicing --------------
+"""
+text="Hello World"
+print(text[0:5]) # Hello
+print(text[6:]) # World
+print(text[:5]) # Hello
+print(text[-5:]) # World
+print(text[0::2]) # HloWrd
+print(text[::-1]) # dlroW olleH
+"""
+#! -------------- String Slicing end ------------
+
+#! -------------- String Repetition --------------
+'''
+name="Jebal "
+print(name*3)
+'''
+#! -------------- String Repetition end ------------
+
+#! -------------- String concatenation --------------
+'''
+name="Jebal"
+print("Hello "+ name)
+
+combined="".join(["Hello", " ", name])
+print(combined)
+
+# formatted_string=f"Hello {name}"
+# formatted_string="{} {} !".format("Hello", name)
+formatted_string="%s %s"%("Hello", name)
+print(formatted_string)
+'''
+#! -------------- String concatenation end ------------
+
+#! -------------- String Methods --------------
+'''
+text="Hello World"
+print(text.upper())
+print(text.lower())
+print(text.capitalize())
+print(text.title())
+print(text.swapcase())
+print(text.replace("World", "Universe"))
+print(text.split(" "))
+print(text.strip())
+print(text.lstrip())
+print(text.rstrip())
+'''
+#! -------------- String Methods end ------------
+
+#! -------------- String Methods for checking and counting --------------
+'''
+text="Hello World"
+
+print(text.startswith("Hello"))
+print(text.endswith("World"))
+print(text.count("l"))
+print(text.find("l"))
+print(text.index("l"))
+print(text.isalnum())
+print(text.isalpha())
+print(text.isdigit())
+print(text.isspace())
+print(text.istitle())
+'''
+#! -------------- String Methods for checking and counting end ------------
