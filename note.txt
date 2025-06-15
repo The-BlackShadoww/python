@@ -279,3 +279,111 @@
         - Database Records
         - Nested data structures
         - etc...
+
+# Function
+    - Features:
+        - Parameters
+        - Required parameters
+        - Default parameters
+        - arguments
+        - Variable-Length arguments (*args) (Tuples)
+        - Keyword arguments (`kwargs) (Dictionary)
+        - Return single value
+        - Return Multiple values
+        - Return Nothing
+        - Return list
+        - Return Dictionary
+        - Early exit return*
+    - Lambda functions
+        - small, anonymous, inline
+        - lambda keyword
+        - simple lambda function
+        - lambda function parameters
+        - lambda function simple conditions
+        - Use cases:
+            - simple functions
+            - functions that are not reused.
+            - Inline use
+            - Readability
+        - When not to use
+            - For complex functions
+            - For Reusability
+    - Variable scope
+        - Local Variable
+        - Global Variable
+        - Local and Global Variable with the same name
+        - Modifying Global Variable Inside a Function with `global` keyword
+    - Use cases:
+        - Code Reusability
+        - Modular Programming
+        - Data Processing
+        - Event Handling
+        - API Interactions
+        - Automation
+        - Testing
+        - Validation
+        - etc...
+
+# Files
+    - Create
+    - Write
+    - Read 
+    - Renaming
+    - Delete/Remove
+
+# Directories
+    - Create
+    - Write
+    - Read 
+    - Renaming
+    - Delete/Remove
+    - Read file names from a directory and print list
+
+# Zip Files
+    - Create
+    - Extract
+    - Make zip from a directory
+
+# CSV file
+    - Create
+    - Read
+
+# Exceptions and Error handling 
+    - simple/single error
+    - multiple error
+    - Finally block
+
+# JSON
+    - json.dumps() python objet --> json string
+    - json.loads() JSON string --> python objet
+    - json.dump()  python objet --> json string --> File write
+    - json.load()  JSON File read --> python object --> JSON String
+
+# Date and Time
+
+# OOP
+    - What is OOP?
+        - Rules for writing reuseable code
+    - Key Features:
+        - Class
+        - Object
+        - Attributes
+        - Methods
+        - Inheritance
+        - Encapsulation
+        - Polymorphism
+    - Constructors:
+        - Constructors are special Methods
+        - Automatically called when and object of a class is created.
+        - Constructor method is always named __init__
+        - Constructor method doesn't return any value
+    - Use cases:
+        - Reusability
+        - Real-World Entitles
+        - Encapsulation
+        - Inheritance for Reusability and Extensibility
+        - Polymorphism for Flexibility
+        - Design Patterns
+        - APIs and Web Services
+        - Database Interactions
+        - etc...

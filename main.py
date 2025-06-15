@@ -456,6 +456,7 @@ print(result)
 #! -------------- Sets end ------------
 
 #! -------------- Dictionary ------------
+'''
 person={
     "name":"John",
     "age":30,
@@ -476,4 +477,343 @@ person.update({"age":31, "city":"Los Angeles"}) # update multiple key-value pair
 
 # print(person.clear()) # remove all key-value pairs from the dictionary
 print(person)
+'''
 #! -------------- Dictionary end ------------
+
+#! -------------- Functions ------------
+'''
+def say_hello(name):
+    print("Hello " +  name) 
+
+say_hello("Jebal")
+
+def add_numbers(*numbers): # *args this is a tuple
+    total=0
+    for num in numbers:
+        total+=num
+    return total
+
+    # print(numbers)
+
+print(add_numbers(1,2,3,4,5))
+# add_numbers(50, 100, 150, "hello", "world", True)
+    
+def introduce(**person): # **kwargs this is a dictionary
+    print(person)
+    print(person["name"])
+    for key, value in person.items():
+        print(key + ": " + str(value))
+
+introduce(
+    name="Jebal", 
+    age=20,
+    city="Dhaka"
+)
+
+def add_two(a, b):
+    return a + b
+
+result=add_two(1, 2) # when a function returns a value, it becomes equivalent to that returned value and we can store it in a variable
+print(result)
+
+
+def add_multiple(a,b):
+    sum=a+b
+    sub=a-b
+    mul=a*b
+    div=a/b
+    # return sum, sub, mul, div # this will return as a tuple
+    # return [sum, sub, mul, div] # this will return as a list
+    return {"sum":sum, "sub":sub, "mul":mul, "div":div} # this will return as a dictionary
+
+result2=add_multiple(1, 2)
+print(result2)
+
+# result3=lambda: 2+2
+result3=lambda x,y: x+y
+print(result3(10, 20))
+
+
+#todo variable scope
+x=10 # global variable
+def myFun():
+    x=10 # local variable
+    y=20
+    print(x+y)
+myFun()
+print(x)
+'''
+#! -------------- Functions end ------------
+
+#! -------------- File ------------
+'''
+#todo Create
+with open("example.text", "w") as file:
+    print("file created")
+    #todo write a string to the file
+    file.write("Hello World") 
+
+with open("example.text", "r") as file:
+    #todo read the file
+    content=file.read()
+    print(content)
+    
+import os
+
+# #todo rename the file
+# os.rename("example.text", "example2.text")
+
+#todo delete the file
+os.remove("example.text")
+'''
+#! -------------- File end ------------
+
+#! -------------- Directory ------------
+'''
+import os
+
+#todo create a directory
+# os.mkdir("new")
+
+#todo read a directory
+# fileList=os.listdir("new")
+# print(fileList)
+
+# for file in fileList:
+#     print(file)
+
+#todo write a file to the directory
+# with open("new/text.txt", "w") as file:
+#     file.write("Hello World")
+
+#todo rename a directory
+# os.rename("new", "new_directory")
+
+#todo delete a file
+# os.remove("new_directory/text.txt")
+
+#todo remove a directory
+# os.rmdir("new_directory")
+
+'''
+#! -------------- Directory end ------------
+
+#! -------------- Zip files ------------
+'''
+import zipfile
+
+#todo create a zip file
+# with zipfile.ZipFile("new.zip","w") as zip:
+#     print("zip file created")
+#     zip.write("demo1.txt")
+#     zip.write("demo2.txt")
+
+#todo Extract from a zip file
+# with zipfile.ZipFile("new.zip", "r") as zip:
+#     print("zip file extracted")
+#     zip.extractall()
+#     extracted_files=zip.namelist()
+#     print(extracted_files)
+
+#todo make zip from a directory
+# import shutil
+# shutil.make_archive("new_zip", "zip", "new")
+'''
+#! -------------- Zip files end ------------
+
+#! -------------- CSV files ------------
+'''
+import csv
+
+#todo create a csv file
+# data=[
+#     ["name", "age", "city"],
+#     ["Jebal", 20, "Dhaka"],
+#     ["John", 30, "New York"],
+#     ["Jane", 25, "London"]
+# ]
+
+# with open("new.csv", "w") as file:
+#     csv_file=csv.writer(file)
+#     csv_file.writerows(data)
+#     print("csv file created")
+    
+#todo read a csv file
+data=[]
+with open("new.csv", "r") as file:
+    content=csv.reader(file)
+    print(content)
+    for row in content:
+        # print(row)
+        data.append(row)
+        print(data)
+'''
+#! -------------- CSV files end ------------
+
+#! -------------- Exceptions and Error handling (try-except) ------------
+'''
+#todo simple/single error
+try:
+    result=10/0
+    print(result)
+except ZeroDivisionError:
+    print(ZeroDivisionError)
+
+#todo multiple error
+try:
+    with open("neww.txt", "r") as file:
+        content=file.read() # this will throw an error
+        result=10/int(content) # this will throw an error
+        print(result) # this will throw an error
+except FileNotFoundError:
+    print(FileNotFoundError)
+except ValueError:
+    print(ValueError)
+except ZeroDivisionError:
+    print(ZeroDivisionError)
+except TypeError:
+    print(TypeError)
+
+try:
+     with open("neww.txt", "r") as file:
+        content=file.read() # this will throw an error
+        result=10/int(content) # this will throw an error
+        print(result) # this will throw an error
+except Exception as e:
+    print(e)
+'''
+#! -------------- Exceptions and Error handling (try-except) end ------------
+
+#! -------------- Exceptions and Error handling (finally) ------------
+'''
+#todo simple/single error 
+try:
+    result=10/0
+    print(result)
+except ZeroDivisionError:
+    print(ZeroDivisionError)
+finally:
+    print("finally block")
+
+#todo multiple error
+try:
+    with open("neww.txt", "r") as file:
+        content=file.read() # this will throw an error
+        result=10/int(content) # this will throw an error
+        print(result) # this will throw an error
+except Exception as e:
+    print(e)
+finally:
+    print("finally block")
+'''
+#! -------------- Exceptions and Error handling (finally) end ------------
+
+#! -------------- JSON ------------
+'''
+import json
+
+#todo python objet --> json string
+# personOBJ={"name": "Jebal", "age": 20, "city": "Dhaka", "titles": ["Engineer", "Developer"]}
+# personJSON=json.dumps(personOBJ, indent=4)
+# print(personJSON)
+
+
+#todo json string --> python objet
+# personJSON='{"name": "Jebal", "age": 20, "city": "Dhaka", "titles": ["Engineer", "Developer"]}'
+# personOBJ=json.loads(personJSON)
+# print(personOBJ)
+
+
+#todo python objet --> json string --> File write
+# personOBJ={"name": "Jebal", "age": 20, "city": "Dhaka", "titles": ["Engineer", "Developer"]}
+# with open("person.json", "w") as personJSONFile:
+#     json.dump(personOBJ, personJSONFile, indent=4)
+#     print("json file created")
+
+#todo JSON File read --> python object --> JSON String
+with open ("person.json", "r") as personOBJFile:
+    personOBJ=json.load(personOBJFile)
+    print(personOBJ)
+    personJSON=json.dumps(personOBJ, indent=4)
+    print(personJSON)
+
+'''
+#! -------------- JSON end ------------
+
+#! -------------- Date and Time ------------
+'''
+import datetime
+
+#todo current date and time
+now=datetime.datetime.now()
+print(now)
+print(now.year)
+print(now.month)
+print(now.day)
+print(now.hour)
+print(now.minute)
+print(now.second)
+print(now.microsecond)
+print(now.date())
+print(now.time())
+print(now.weekday())
+print(now.timestamp())
+
+# YYYY-MM-DD, YYYY-DD-MM, DD/MM/YYYY, MM/DD/YYYY
+
+# formatted_datetime=now.strftime("%d/%m/%y")
+formatted_datetime=now.strftime("%d/%m/%y %H:%M:%S")
+print(formatted_datetime)
+
+#todo calculating date time difference
+date1= datetime.datetime(2024, 9, 1)
+date2= datetime.datetime(2023, 9, 1)
+
+difference=date1 - date2
+print(difference)
+
+new_date=date1+datetime.timedelta(days=10)
+print(new_date)
+'''
+#! -------------- Date and Time end ------------
+
+#! -------------- OOP ------------
+#todo create a class
+class MyClass:
+    x=10 # class variable
+    y=30
+    z=40
+    def addTwo(self, a, b): # class method
+        sum=self.x + self.y + self.z + a + b
+        print(sum)
+    def addNew(self):
+        self.addTwo(500, 100)
+
+#todo create an object
+obj1=MyClass() # this will create an object of MyClass class
+print(obj1.x)
+obj1.addTwo(5, 10)
+obj1.addNew()
+
+#todo create constructor
+class MyClass2:
+    x=10
+    y=30
+
+    #? constructor method it will be called automatically and doesn't return any value
+    # def __init__(self, a, b):
+    #     sum=self.x + self.y + a + b
+    #     print(sum)
+
+    def __init__(self, z, x):
+        self.z = z # instance variable
+        self.x = x # instance variable and it will change the value of x variable
+    
+    def addTwo(self): # instance method
+        print(self.x + self.y + self.z)
+        
+obj2=MyClass2(50, 100)
+print(obj2.z)
+print(obj2.x)
+obj2.addTwo()
+#! -------------- OOP end ------------
