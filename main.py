@@ -1,4 +1,20 @@
-#Python """
+#Python
+
+
+#! -------------- Importing python modules --------------
+# import calculator
+# from modules import add, sub
+# # print(calculator.add(10, 20))
+# print(add(10, 20))
+#! -------------- Importing python modules end --------------
+
+#! -------------- Importing custom packages --------------
+"""
+import package
+package.add()
+package.sub()
+"""
+#! -------------- Importing custom packages --------------
 
 #! -------------- Variables --------------
 # total_cost=100
@@ -778,6 +794,7 @@ print(new_date)
 #! -------------- Date and Time end ------------
 
 #! -------------- OOP ------------
+""""
 #todo create a class
 class MyClass:
     x=10 # class variable
@@ -816,4 +833,227 @@ obj2=MyClass2(50, 100)
 print(obj2.z)
 print(obj2.x)
 obj2.addTwo()
+
+#todo static method
+class MyClass3:
+    x=10
+    y=30
+
+    @staticmethod #todo this will create a static method
+    def addTwo():
+        print(MyClass3.x + MyClass3.y)
+
+MyClass3.addTwo() #todo this will call the static method
+obj3=MyClass3()
+obj3.addTwo()
+
+print(MyClass3.x) # statically accessing x class variable
+print(obj3.x) # dynamically accessing x instance variable
+
+#todo class inheritance
+class Father:
+    x=10
+    y=30
+
+    def __init__(self):
+        print("Father class constructor")
+
+    def sub(self):
+        print(self.x - self.y)
+    
+    @staticmethod
+    def mul():
+        print(Father.x * Father.y)
+
+class Mother:
+    a=10
+    b=30
+
+    def sum(self):
+        print(self.a + self.b)
+
+
+class Son(Father, Mother): #todo Inheritance --> this will inherit the properties of Father class
+    def __init__(self):
+        super().__init__() #todo Constructor inheritance --> this will call the constructor of Father class
+        print("Son class constructor")
+
+class GrandSon(Son): #todo Inheritance --> this will inherit the properties of Son class
+    pass 
+
+obj4 = Son()
+obj4.sub()
+obj4.sum()
+print(obj4.x)
+print(obj4.b)
+
+obj5 = GrandSon()
+obj5.sub()
+obj5.sum()
+print(obj5.x)
+print(obj5.b)
+
+# If parent has static properties and methods, Child can access them as it is like parent
+# If child has static properties and methods, parents can't access them as it is like child
+Father.mul() #todo statically accessing mul static method from Father class
+Son.mul() #todo statically accessing mul static method from Son class
+GrandSon.mul() #todo statically accessing mul static method from GrandSon class
+
+#todo method overriding
+class GrandSon(Son):
+    def sub(self):
+        print(self.x - self.y - 10)
+
+obj6 = GrandSon()
+obj6.sub()
+obj7=Father() # sub method will not change in Father class
+obj7.sub()
+
+#todo abstract class
+# to make a class abstract, this class must have at least one abstract method and it must inherit from ABC class
+from abc import ABC, abstractmethod
+
+class Bangladesh(ABC):
+    @abstractmethod #todo this will create an abstract method
+    def print10to20(self):
+       pass
+
+    def print0to10(self):
+        for i in range(0, 11):
+            print(i)
+
+class Dhaka(Bangladesh):
+    #todo --> child class must implement the abstract method of parent class
+    def print10to20(self):
+       for i in range(0, 21):
+            print(i)
+
+obj8=Dhaka()
+obj8.print0to10()
+obj8.print10to20()
+
+#todo Method overloading
+class Calculator:
+    x=100
+    y=30
+
+    #todo default argument
+    def add(self, a=0, b=0):
+        print(self.x + self.y + a + b)
+
+    # def add(self, a, b):
+    #     print(a + b)
+
+    # def add(self, a, b, c):
+    #     print(a + b + c)
+
+    #todo variable length arguments
+    def myMethod(self, *args):
+        print(args)
+
+obj9=Calculator()
+obj9.add(10, 20)
+# obj9.add(10, 20)
+# obj9.add(10, 20, 30)
+obj9.myMethod(10, 20, 30, 40, 50)
+
+#todo public, private, protected modifiers
+
+#todo public
+# (inside class) + (child class) + (outside of class)
+class CAR:
+    BRAND ="BMW"
+    def DISPLAY(self):
+        print(f"This is a {self.BRAND} car")
+
+class BMW(CAR):
+    def DisplayFromChild(self):
+        print(f"This is a {self.BRAND} car")
+
+obj10=CAR()
+print(obj10.BRAND)
+obj10.DISPLAY()
+
+#todo protected
+# (inside class) + (child class) + (outside of class, but not recommended xxxx) 
+class BUS:
+    _BRAND ="Tesla"
+    def DISPLAY(self):
+        print(f"This is a {self._BRAND} bus")
+
+class Tesla(BUS):
+    def DisplayFromChild(self):
+        print(f"This is a {self._BRAND} bus")
+
+obj11=BUS()
+print(obj11._BRAND) # outside of class, but not recommended xx
+obj11.DISPLAY()
+
+#todo private
+# (inside class) + (can't access inside child class xxx) + (can't access outside of class xxx)
+
+class BIKE:
+    __BRAND ="Honda"
+    def DISPLAY(self):
+        print(f"This is a {self.__BRAND} bike")
+
+class Honda(BIKE):
+    def DisplayFromChild(self):
+        print(f"This is a {self.__BRAND} bike")
+
+obj12=Honda()
+# print(obj12.__BRAND) # can't access in child class and outside of class
+obj12.DISPLAY()
+
+
+#todo Getter and Setter
+
+class BOOK:
+    __NAME="The Idiot" #todo private variable
+
+    @property #todo getter
+    def NAME(self):
+        return self.__NAME
+    
+    @NAME.setter #todo setter
+    def NAME(self, name):
+        self.__NAME=name
+
+obj13=BOOK()
+
+print(obj13.NAME)
+
+obj13.NAME="The Alchemist" #todo setter
+print(obj13.NAME) # todo getter
+
+#todo Encapsulation
+class BankAccount:
+    __balance = 0
+
+    # deposit
+    def deposit(self,amount):
+        if amount > 0:
+            self.__balance += amount
+            print("Amount Deposited Successfully")
+        else:
+            print("Invalid amount")
+
+    # withdraw
+    def withdraw(self,amount):
+        if amount > 0 and amount <= self.__balance:
+            self.__balance -= amount
+            print("Amount Withdrawn Successfully")
+        else:
+            print("Invalid amount")
+
+    # check Balance
+    def checkBalance(self):
+        print("Available Balance is:",self.__balance)
+
+objBank=BankAccount()
+objBank.deposit(1000)
+objBank.withdraw(1500)
+objBank.checkBalance()
+"""
 #! -------------- OOP end ------------
+

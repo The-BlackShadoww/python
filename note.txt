@@ -377,6 +377,34 @@
         - Automatically called when and object of a class is created.
         - Constructor method is always named __init__
         - Constructor method doesn't return any value
+    - Static Properties
+    - Abstract class nad Methods
+    - method overriding
+    - method overloading
+    - Access modifiers
+        - control the visibility and accessibility of class attributes and methods
+        - not like Java or C++
+        - it uses naming conventions to indicate access levels
+        - Public/Private/Protected
+    - Getters
+        - Method According To The Name
+        - Decorator @property
+    - Setters
+        - Method According To The Name
+        - @VariableName.setter
+    - Encapsulation
+        - Keeping all the related code together
+        - Why needed?
+            - Data protection
+            - Controlled Access
+            - Modularity
+    - Polymorphism
+        - It means Multiple use cases or characters
+        - Overriding, overloading
+        - Compile-time Polymorphism - its not something built-in in python
+            - overloading
+        - Runtime Polymorphism - its something built-in in python
+            - Overriding
     - Use cases:
         - Reusability
         - Real-World Entitles
@@ -387,3 +415,25 @@
         - APIs and Web Services
         - Database Interactions
         - etc...
+
+# Python Modules
+    - A python module is a file containing python code ,such as functions, variables, and classes, 
+    - can be imported and used in other python scripts or interactive sessions.
+    - Modules allow for code reuse, organization, and separation of concerns
+    - Built-in Modules
+        - math module
+        - os module
+        - sys module --> gives access to variables and functions interacting with the python runtime environment
+        - datetime module
+        - random module
+        - time module
+        - JSON module
+        - http module (most important)
+        - subprocess module
+        - hashlib module
+        - csv module
+    - custom single file module
+    - custom Multi-file/package module
+        - package name = folder name = Namespace
+        - __init__.py
+    - pip 
