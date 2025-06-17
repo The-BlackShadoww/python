@@ -436,4 +436,10 @@
     - custom Multi-file/package module
         - package name = folder name = Namespace
         - __init__.py
-    - pip 
+    - pip
+
+    # Decorators (Advance)
+    # Iterators
+    # Pythonic Idioms & Comprehensions
+    # Regular Expressions
+    # Asynchronous Programming (async/await)

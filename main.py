@@ -1057,3 +1057,32 @@ objBank.checkBalance()
 """
 #! -------------- OOP end ------------
 
+#! -------------- Magic / Dunder methods ------------
+# print(dir(int))
+# class Employee:
+#     def __new__(cls):
+#         print ("__new__ magic method is called")
+#         inst = object.__new__(cls)
+#         return inst
+#     def __init__(self):
+#         print ("__init__ magic method is called")
+#         self.name='Satya'
+
+# obj=Employee()
+# print(obj.name)
+
+class employee:
+  def __init__(self):
+    self.name='Swati'
+    self.salary=10000
+  def __str__(self):
+    return 'name='+self.name+', salary=$'+str(self.salary)
+    
+    
+e1 = employee()
+print(e1)
+
+#! -------------- Magic / Dunder methods end ------------
+
+def jog(a:number, b:number) -> number:
+    return a + b
