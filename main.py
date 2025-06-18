@@ -1,6 +1,5 @@
 #Python
 
-
 #! -------------- Importing python modules --------------
 # import calculator
 # from modules import add, sub
@@ -1058,6 +1057,7 @@ objBank.checkBalance()
 #! -------------- OOP end ------------
 
 #! -------------- Magic / Dunder methods ------------
+"""
 # print(dir(int))
 # class Employee:
 #     def __new__(cls):
@@ -1081,8 +1081,77 @@ class employee:
     
 e1 = employee()
 print(e1)
-
+"""
 #! -------------- Magic / Dunder methods end ------------
 
-def jog(a:number, b:number) -> number:
-    return a + b
+#! -------------- Comprehensions & Idioms ------------
+"""
+# squares=[]
+
+# for x in range(5):
+#   squares.append(x * x)
+
+#todo comprehensions
+squares=[x * x for x in range(5)]
+#todo nested comprehensions
+matrix = [[i * j for j in range(3)] for i in range(3)]
+print(squares)
+print(matrix)
+
+#todo idioms
+names = ["Alice", "Bob", "Charlie"]
+greetings  = [f"Hello, {name}" for name in names if len(name) > 3]
+print(greetings)
+"""
+#! -------------- Comprehensions & Idioms end ------------
+
+#! -------------- Decorators ------------
+"""
+def my_decorator(func):
+    def wrapper():
+        print("Before function execution")
+        func()
+        print("After function execution")
+    return wrapper
+
+@my_decorator
+def my_function():
+    print("Inside the function")
+
+my_function()
+
+#todo decorators with arguments
+def decorator_with_arguments(function):
+    def wrapper_accepting_arguments(arg1, arg2):
+        print("My arguments are: {0}, {1}".format(arg1,arg2))
+        function(arg1, arg2)
+    return wrapper_accepting_arguments
+
+
+@decorator_with_arguments
+def cities(city_one, city_two):
+    print("Cities I love are {0} and {1}".format(city_one, city_two))
+
+cities("Nairobi", "Accra")
+
+#todo General purpose decorator with *args and **kwargs
+def a_decorator_passing_arbitrary_arguments(function_to_decorate):
+    def a_wrapper_accepting_arbitrary_arguments(*args,**kwargs):
+        print('The positional arguments are', args)
+        print('The keyword arguments are', kwargs)
+        function_to_decorate(*args)
+    return a_wrapper_accepting_arbitrary_arguments
+
+@a_decorator_passing_arbitrary_arguments
+def function_with_no_argument():
+    print("No arguments here.")
+
+function_with_no_argument()
+
+@a_decorator_passing_arbitrary_arguments
+def function_with_arguments(a, b, c):
+    print(a, b, c)
+
+function_with_arguments(1,2,3)
+"""
+#! -------------- Decorators end ------------

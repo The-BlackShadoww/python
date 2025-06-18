@@ -13,12 +13,12 @@
 3 - Sets
 
 # Type conversion-
- - Explicit = int(), float(), str() - We do the conversion forcefully
- -Implicit 
-    x  = 3.14
-    y = 2
-    z= x + y 
-    here the value of z will be float automatically we don't convert forcefully
+    - Explicit = int(), float(), str() - We do the conversion forcefully
+    - Implicit
+        x  = 3.14
+        y = 2
+        z= x + y 
+        here the value of z will be float automatically we don't convert forcefully
 
 # Strings - Strings in python are sequences of characters enclosed within quotes
     - Single Quotes ('')
@@ -438,8 +438,29 @@
         - __init__.py
     - pip
 
-    # Decorators (Advance)
-    # Iterators
-    # Pythonic Idioms & Comprehensions
-    # Regular Expressions
-    # Asynchronous Programming (async/await)
+# Pythonic Idioms & Comprehensions
+    - Comprehensions are shortcuts for creating new lists, dictionaries, or sets without writing    full for loops
+    - Idioms are smart, clean, and commonly accepted ways of doing things in Python — sort of like “best practice shortcuts.”
+
+# Decorators (Advance)
+    - A decorator is like a wrapper that adds extra behavior to a function — without changing its actual code.
+    - Order matters when using multiple decorators
+
+# Iterators
+    - An iterator is an object that lets you loop through something — one item at a time.
+    - key methods: __iter__(), __next__()
+
+# Generators
+    - A generator is a special type of function that remembers where it left off and can yield values one at a time, instead of returning them all at once.
+    - keyword --> yield
+    - Use cases
+        - Read Big File
+        - infinite streams,
+        - pipelines, 
+        - async tasks
+
+# Asynchronous Programming (async/await)
+
+# Regular Expressions
+
+# Static typing
